@@ -1,0 +1,70 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title>H1B Data Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row row-background">
+
+      <h1 class="text-center ">H1B Data Set Analysis</h1>
+      </div>
+      <div class="row">
+          <div class="col-md-6 ">
+            <canvas id="myChart1" class="charts"></canvas>
+          </div>
+
+          <div class="col-md-6 ">
+            <canvas id="myChart2" class="charts"></canvas> 
+
+          </div>
+      </div>
+
+       <div class="row row_custom"> <!--for toggle on mapp starts here-->
+          <div class="col-md-12 ">
+              <div id="floating-panel">
+                <input type="checkbox" onclick="toggleHeatmap()" id="1" checked>CERTIFIED</button>
+                <input type="checkbox" onclick="toggleHeatmap()" id="2" checked>CERTIFIED-WITHDRAWN</button>
+                <input type="checkbox" onclick="toggleHeatmap()" id="3" checked>WITHDRAWN</button>
+                <input type="checkbox" onclick="toggleHeatmap()" id="4" checked>DENIED</button>
+              </div>
+              <div id="map" class="map"></div> <!--map starts and ends here-->
+          </div>
+       </div> <!--for toggle on map ends here-->
+
+
+
+        <div class="row row_custom">
+              <div class="col-md-6 ">
+                <canvas id="myChart3" ></canvas>
+              </div>
+
+              <div class="col-md-6 ">
+                <canvas id="myChart4" ></canvas> 
+              </div>
+        </div>
+    </div>
+
+      <!-- including script chart.js -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+      <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="./js/viz.js"></script>
+
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="./js/map.js"></script>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJuhHwXtGVdWP5Ot4Kqjaz6VRCqCZDLyA&libraries=visualization&callback=initMap">
+      </script>
+
+
+</body>
+</html>
+
+
+
